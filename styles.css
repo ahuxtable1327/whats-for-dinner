@@ -14,3 +14,33 @@ html {
   height: 100%;
   overflow: hidden;
 }
+
+header {
+  background-color: #0fb9b1;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-box {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(225, 225, 225, .9)
+}
+
+.right-box {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(225, 225, 225, .9)
+}
+
+
+
+
+
+
+/* * {
+  border: 1px solid blue;
+} */
