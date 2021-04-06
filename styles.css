@@ -8,3 +8,9 @@ red - #ee5253
 
 */
 
+html {
+  background: url(assets/burger-friends.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
