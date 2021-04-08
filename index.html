@@ -5,21 +5,36 @@
   </head>
   <body>
     <header>
-      <h2>What's for Dinner?</h2>
-      <button>Add a recipe</button>
+      <h1>What's for Dinner?</h1>
+      <button class='add-recipe'>Add a recipe</button>
     </header>
-    <section class='left-box'>
-      <h2>What are you looking for?</h2>
-      <form>
-        <input type='radio'>Side</input>
-        <input type='radio'>Main dish</input>
-        <input type='radio'>Dessert</input>
-      </form>
-      <button>Let's cook!</button>
+    <main class='main-container'>
+    <section class='box-container'>
+      <section class='left-box'>
+        <h2>What are you looking for?</h2>
+        <form class='meal-choice'>
+          <input type='radio'id='rd-side'>
+          <label for='rd-side'>Side</label><br/>
+          <input type='radio'id='rd-main'>
+          <label for='rd-main'>Main Dish</label><br/>
+          <input type='radio'id='rd-dessert'>
+          <label for='rd-dessert'>Dessert</label><br/>
+          <input type='radio'id='rd-entire'>
+          <label for='rd-entire'>Entire Meal</label><br/>
+        </form>
+        <button class='choose-meal'>Let's Cook!</button>
+      </section>
+      <section class='right-box'>
+        <img src='assets/cookpot.svg' alt='A cook pot'>
+        <div class='display-recipe'>
+          <h5 class='recipe'>You should make:</h5>
+          <h3 class='main'>Main dish</h3>
+          <h3 class='side'>Side dish</h3>
+          <h3 class='dessert'>Dessert</h3>
+        </div>
+      </section>
     </section>
-    <section class='right-box'>
-      <img src='assets/cookpot.svg' alt='A cook pot'>
-    </section>
+    </main>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
