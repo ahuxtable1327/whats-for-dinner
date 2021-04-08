@@ -81,6 +81,9 @@ img  {
   width: 20vw;
   height: 35vh;
 }
+.display-recipe {
+  display: none;
+}
 
 .left-box {
   width: 35vw;
@@ -94,6 +97,11 @@ h2 {
   margin-top: 2em;
   font-size: 1.6em;
 }
+
+/* .required:after {
+  content: ' *';
+  color: red;
+} */
 
 input[type='radio'],
 label {
@@ -114,6 +122,10 @@ label {
   margin-left: 2em;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+button:hover {
+  background-color: #95a5a6;
 }
 
 
