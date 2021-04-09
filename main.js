@@ -11,7 +11,7 @@ var sidesRadioBtn = document.querySelector('#rd-side')
 var mainRadioBtn = document.querySelector('#rd-main')
 var dessertRadioBtn = document.querySelector('#rd-dessert')
 var cookPot = document.querySelector('img')
-var randomSide = sides[getRandomIndex(sides)];
+// var randomSide =
 
 
 
@@ -20,17 +20,32 @@ var randomSide = sides[getRandomIndex(sides)];
 showRecipeBtn.addEventListener('click', displayRecipe)
 
 function displayRecipe() {
-  console.log('hi');
   var displayedRecipe = document.querySelector('#recipe')
+  var randomSide = sides[getRandomIndex(sides)];
+  var randomMain = mains[getRandomIndex(mains)];
+  var randomDessert = desserts[getRandomIndex(desserts)];
+  console.log(randomSide)
   if (sidesRadioBtn.checked) {
     cookPot.classList.add('hidden')
-    console.log('hello')
     displayedRecipe.innerHTML = `
       <h5 class='recipe'>You should make:</h5>
       <h3 class='main'>${randomSide}</h3>`
-  }
+  } else if (mainRadioBtn.checked) {
+      cookPot.classList.add('hidden')
+      displayedRecipe.innerHTML = `
+        <h5 class='recipe'>You should make:</h5>
+        <h3 class='main'>${randomMain}</h3>`
+    } else{
+      if (dessertRadioBtn.checked) {
+        cookPot.classList.add('hidden')
+        displayedRecipe.innerHTML = `
+          <h5 class='recipe'>You should make:</h5>
+          <h3 class='main'>${randomDessert}</h3>`
+    }
+}
 }
 
+
 function getRandomIndex(array) {
-  return Math.floor(Math.random * array.length);
+  return Math.floor(Math.random() * array.length);
 }
