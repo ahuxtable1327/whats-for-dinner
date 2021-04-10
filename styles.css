@@ -44,7 +44,7 @@ h1 {
 
 .add-recipe {
   height: 5vh;
-  width:20vh;
+  width:15vw;
   border-radius: 0.5em;
   margin-right: 2em;
   margin-top: 0.8em;
@@ -120,7 +120,7 @@ label {
 .choose-meal {
   background: #0fb9b1;
   height: 5vh;
-  width:20vh;
+  width:15vw;
   border-radius: 0.5em;
   margin-left: 2em;
   text-transform: uppercase;
@@ -131,6 +131,38 @@ button:hover {
   background-color: #95a5a6;
 }
 
+footer {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  bottom:0;
+  width:100%;
+  height: 7vh;
+  background-color: rgba(225, 225, 225, .9);
+}
+
+.recipe-text {
+  margin-left: 2em;
+  margin-right: 0.4em;
+  font-size: 1.1em;
+}
+
+.new-recipe{
+  height: 4vh;
+  width: 15vw;
+  margin-top: 0.8em;
+}
+
+.add-new {
+  background: #0fb9b1;
+  height: 4vh;
+  width:10vw;
+  border-radius: 0.5em;
+  margin-left: 2em;
+  margin-top: 0.7em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
 
 
