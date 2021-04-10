@@ -27,6 +27,7 @@ showRecipeBtn.addEventListener('click', displayRecipe)
 recipeFormBtn.addEventListener('click', displayAddForm)
 addNewBtn.addEventListener('click', addRecipeToList)
 addNewBtn.addEventListener('click', displayNewRecipe)
+addNewBtn.addEventListener('click', validateType)
 
 
 function displayRecipe() {
@@ -49,8 +50,8 @@ function displayRecipe() {
         displayedRecipe.innerHTML = `
           <h5 class='recipe'>You should make:</h5>
           <h3 class='main'>${randomDessert}</h3>`
-    }
-}
+        }
+      }
 }
 
 function displayAddForm() {
@@ -71,10 +72,19 @@ function addRecipeToList() {
 
 
 function displayNewRecipe () {
-  cookPot.classList.add('hidden');
-  displayedRecipe.innerHTML = `
-      <h5 class='recipe'>You should make:</h5>
-      <h3 class='main'>${recipeName.value}</h3>`
+  if (recipeType.value !== '' && recipeName.value !== '') {
+    cookPot.classList.add('hidden');
+    displayedRecipe.innerHTML = `
+    <h5 class='recipe'>You should make:</h5>
+    <h3 class='main'>${recipeName.value}</h3>`
+  }
+}
+
+function validateType() {
+  var type = 'side' || 'main' || 'dessert';
+  if (recipeType.value !== type) {
+    alert(`${recipeType.value} is not a valid input!`)
+  }
 }
 
 
