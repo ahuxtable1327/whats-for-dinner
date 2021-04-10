@@ -26,6 +26,8 @@ var recipeName = document.querySelector('#recipe-name')
 showRecipeBtn.addEventListener('click', displayRecipe)
 recipeFormBtn.addEventListener('click', displayAddForm)
 addNewBtn.addEventListener('click', addRecipeToList)
+addNewBtn.addEventListener('click', displayNewRecipe)
+
 
 function displayRecipe() {
   var randomSide = sides[getRandomIndex(sides)];
@@ -65,21 +67,14 @@ function addRecipeToList() {
   } else if (recipeType.value === 'dessert') {
     dessert.push(recipeName.value)
   }
-
-  // for (var i = 0; i < array.length i ++)
-  // if recipe type === sides
-  // push recipe namne into sides array
-  //else if recipe type === main
-  // push into main array
-  //if === desserts
-  // push into desserts
-  // else return erre\or 'that does not match any meal types, please try again'
 }
 
-function addRecipes(array) {
-  if (!array.includes(recipeName)) {
 
-  }
+function displayNewRecipe () {
+  cookPot.classList.add('hidden');
+  displayedRecipe.innerHTML = `
+      <h5 class='recipe'>You should make:</h5>
+      <h3 class='main'>${recipeName.value}</h3>`
 }
 
 
