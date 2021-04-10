@@ -10,7 +10,9 @@ var showRecipeBtn = document.querySelector('#show-recipe')
 var sidesRadioBtn = document.querySelector('#rd-side')
 var mainRadioBtn = document.querySelector('#rd-main')
 var dessertRadioBtn = document.querySelector('#rd-dessert')
+var recipeFormBtn = document.querySelector('#add-recipe')
 var cookPot = document.querySelector('img')
+var footer = document.querySelector('footer')
 // var randomSide =
 
 
@@ -18,6 +20,7 @@ var cookPot = document.querySelector('img')
 
 
 showRecipeBtn.addEventListener('click', displayRecipe)
+recipeFormBtn.addEventListener('click', displayAddForm)
 
 function displayRecipe() {
   var displayedRecipe = document.querySelector('#recipe')
@@ -43,6 +46,10 @@ function displayRecipe() {
           <h3 class='main'>${randomDessert}</h3>`
     }
 }
+}
+
+function displayAddForm() {
+  footer.classList.toggle('fadeIn');
 }
 
 
