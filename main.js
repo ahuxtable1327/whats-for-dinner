@@ -11,23 +11,26 @@ var sidesRadioBtn = document.querySelector('#rd-side')
 var mainRadioBtn = document.querySelector('#rd-main')
 var dessertRadioBtn = document.querySelector('#rd-dessert')
 var recipeFormBtn = document.querySelector('#add-recipe')
+var addNewBtn = document.querySelector('#add-new')
+
 var cookPot = document.querySelector('img')
 var footer = document.querySelector('footer')
-// var randomSide =
+var displayedRecipe = document.querySelector('#recipe')
 
+var recipeType = document.querySelector('#recipe-type')
+var recipeName = document.querySelector('#recipe-name')
 
 
 
 
 showRecipeBtn.addEventListener('click', displayRecipe)
 recipeFormBtn.addEventListener('click', displayAddForm)
+addNewBtn.addEventListener('click', addRecipeToList)
 
 function displayRecipe() {
-  var displayedRecipe = document.querySelector('#recipe')
   var randomSide = sides[getRandomIndex(sides)];
   var randomMain = mains[getRandomIndex(mains)];
   var randomDessert = desserts[getRandomIndex(desserts)];
-  console.log(randomSide)
   if (sidesRadioBtn.checked) {
     cookPot.classList.add('hidden')
     displayedRecipe.innerHTML = `
@@ -51,6 +54,34 @@ function displayRecipe() {
 function displayAddForm() {
   footer.classList.toggle('fadeIn');
 }
+
+function addRecipeToList() {
+  console.log('hi')
+  if (recipeType.value === 'side') {
+    sides.push(recipeName.value)
+    console.log('hello')
+  } else if (recipeType.value === 'main') {
+    mains.push(recipeName.value)
+  } else if (recipeType.value === 'dessert') {
+    dessert.push(recipeName.value)
+  }
+
+  // for (var i = 0; i < array.length i ++)
+  // if recipe type === sides
+  // push recipe namne into sides array
+  //else if recipe type === main
+  // push into main array
+  //if === desserts
+  // push into desserts
+  // else return erre\or 'that does not match any meal types, please try again'
+}
+
+function addRecipes(array) {
+  if (!array.includes(recipeName)) {
+
+  }
+}
+
 
 
 function getRandomIndex(array) {
