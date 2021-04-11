@@ -74,12 +74,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 img  {
   margin-top: 5rem;
-  width: 20vw;
-  height: 35vh;
+  width: 18vw;
+  height: 25vh;
 }
 
 h5 {
@@ -90,6 +91,17 @@ h5 {
 h3 {
   font-size: 1.5em;
   text-transform: capitalize;
+}
+
+.clear-recipe {
+  height: 5vh;
+  width:10vw;
+  border-radius: 0.5em;
+  margin-right: 2em;
+  margin-top: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  align-self: flex-end;
 }
 
 .left-box {
