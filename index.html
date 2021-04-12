@@ -19,20 +19,19 @@
           <label for='rd-main'>Main Dish</label><br/>
           <input type='radio' name='selection' id='rd-dessert'>
           <label for='rd-dessert'>Dessert</label><br/>
-          <input type='radio' name='selection' id='rd-entire'>
-          <label for='rd-entire'>Entire Meal</label><br/>
         </form>
         <button class='choose-meal' id='show-recipe'>Let's Cook!</button>
       </section>
       <section class='right-box'>
         <img src='assets/cookpot.svg' class='cook-pot'alt='A cook pot'>
         <div class='display-recipe' id='recipe'> </div>
+        <button class='clear-recipe' id='clear-recipe'>Clear</button>
       </section>
     </section>
     </main>
     <footer>
       <label class='recipe-text' for='recipe-type'> Recipe Type:</label>
-      <input class='new-recipe' type='text' id='recipe-type'>
+      <input class='new-recipe' type='text' id='recipe-type' pattern='side|main|dessert'>
       <label class='recipe-text' for='recipe-name'> Recipe Name:</label>
       <input class='new-recipe' type='text' id='recipe-name'>
       <button class='add-new' id='add-new'>Add new</button>
