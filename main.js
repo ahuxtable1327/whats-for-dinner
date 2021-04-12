@@ -67,6 +67,7 @@ function addRecipeToList() {
 }
 
 function displayNewRecipe () {
+  displayedRecipe.classList.remove('hidden');
   if (!recipeType.value && !recipeName.value) {
     addNewBtn.disabled = true;
   } else {
@@ -81,7 +82,7 @@ function displayNewRecipe () {
 }
 
 function clearRecipe() {
-  displayedRecipe.classList.toggle('hidden');
+  displayedRecipe.classList.add('hidden');
   cookPot.classList.remove('hidden');
   clearBtn.classList.remove('fadeIn')
 }
