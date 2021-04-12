@@ -94,6 +94,7 @@ h3 {
 }
 
 .clear-recipe {
+  background-color: #95a5a6;
   height: 5vh;
   width:10vw;
   border-radius: 0.5em;
@@ -102,6 +103,7 @@ h3 {
   text-transform: uppercase;
   font-weight: bold;
   align-self: flex-end;
+  visibility: hidden;
 }
 
 .left-box {
@@ -140,6 +142,7 @@ label {
   margin-left: 2em;
   text-transform: uppercase;
   font-weight: bold;
+  visibility: hidden;
 }
 
 button:hover {
@@ -173,9 +176,9 @@ input.new-recipe {
   text-transform: lowercase;
 }
 
-.new-recipe:invalid {
+/* .new-recipe:invalid {
   border: 2px solid red;
-}
+} */
 
 .add-new {
   background: #0fb9b1;
